@@ -1,0 +1,89 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Tiago Costa <tiagocosta@digitalillusion.pt>
+% http://www.digitalillusion.pt
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, a4paper]{awesome-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm} % Configure page margins with geometry
+
+%\fontdir[fonts/] % Specify the location of the included fonts
+
+% Color for highlights
+\colorlet{awesome}{awesome-skyblue} 
+
+%----------------------------------------------------------------------------------------
+%	FONT CONFIGURATIONS
+%	Comment this section to set the default values
+%----------------------------------------------------------------------------------------
+
+% \renewcommand{\skilltypestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+% \renewcommand{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{text} #1}}
+% \renewcommand{\paragraphstyle}{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{text}}
+% \renewcommand{\descriptionstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+
+% % Redefine an environment for cvitems(for cventry)
+% \renewenvironment{cvitems}{%
+  % \vspace{-4.0mm}
+  % \begin{justify}
+  % \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    % \setlength{\parskip}{2pt}
+    % \renewcommand{\labelitemi}{\bullet}
+% }{%
+  % \end{itemize}
+  % \end{justify}
+  % \vspace{-4.0mm}
+% }
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+\name{Tiago C. H.}{Costa}
+\address{Lisboa, Portugal}
+%\mobile{(+351) 99 888 7777}
+%\photo[rectangle,edge,left]{me.jpg} % Use photo.
+
+\email{tiagocosta@digitalillusion.pt}
+\homepage{www.digitalillusion.pt}
+\github{Nippius}
+\linkedin{tiago-costa-5a728665}
+
+\position{Software Engineer}
+
+\makecvfooter{\today}{Tiago C. H. Costa~~~·~~~Résumé}{\thepage}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+%----------------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%----------------------------------------------------------------------------------------
+
+\input{cv/profile.tex}
+\input{cv/skills.tex}
+\input{cv/experience.tex}
+\input{cv/education.tex}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
