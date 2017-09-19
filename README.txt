@@ -1,13 +1,21 @@
-Based on the awesome [Awesome-CV](https://github.com/posquit0/Awesome-CV) template by posquit0.
+# About
 
-#How to build:
+This repo contains my Curriculum Vitae. You are free modify it to create your own but please don't use my resume for anything else without my permission!
 
-Download [TeXLive](http://tug.org/texlive/acquire-netinstall.html) and extract it's contents to a folder
+Do take a look to the [Awesome-CV](https://github.com/posquit0/Awesome-CV) template if you want to do more advanced stuff (like cover letters for example).
 
-Create a environment variable called TEX with the value <path_to_text_live_bin_folder>
+# How to build:
 
-Run build.ps1 to build all the documents.
+- Download [TeXLive](http://tug.org/texlive/acquire-netinstall.html) and extract it's contents to a folder.
 
-Run clean.ps1 to clean the builds.
+- Create a environment variable called TEX with the value <path_to_text_live_bin_folder>
+
+- Run build.ps1 to build all the documents.
+
+- Run clean.ps1 to clean the builds (this deletes the output).
 
 The output files are stored in the folder /output
+
+# Credit
+
+Based on the awesome [Awesome-CV](https://github.com/posquit0/Awesome-CV) template by posquit0.
