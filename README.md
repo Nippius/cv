@@ -8,7 +8,7 @@ Do take a look to the [Awesome-CV](https://github.com/posquit0/Awesome-CV) templ
 
 - Download [TeXLive](http://tug.org/texlive/acquire-netinstall.html) and extract it's contents to a folder.
 
-- Create a environment variable called TEX with the value <path_to_text_live_bin_folder>
+- Create a environment variable called TEXDIR with the value <path_to_text_live_bin_folder>
 
 - Run build.ps1 to build all the documents.
 
