@@ -8,7 +8,7 @@ $OUTPUT_LOCATION = "$BASE_LOCATION\output"
 ##
 # Xelatex configuration
 ##
-$TEX_LOCATION = Join-Path -Path $env:TEXDIR -ChildPath '2021' 'bin' 'win32'
+$TEX_LOCATION = Join-Path -Path $env:TEXDIR -ChildPath '2025' 'bin' 'windows'
 $XELATEX = "$TEX_LOCATION\xelatex.exe"
 $XELATEX_FLAGS = "-output-directory","build"
 
