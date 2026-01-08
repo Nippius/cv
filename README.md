@@ -1,6 +1,6 @@
 # About
 
-This repo contains my Curriculum Vitae. You are free modify it to create your own but please don't use my resume for anything else without my permission!
+This repo contains my Curriculum Vitae. You are free to modify it to create your own but please don't use my resume for anything else without my permission.
 
 Do take a look to the [Awesome-CV](https://github.com/posquit0/Awesome-CV) template if you want to do more advanced stuff (like cover letters for example).
 
