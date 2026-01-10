@@ -1,4 +1,2 @@
-misc/*
-en/build/
-pt/build/
-output
+build
+out
