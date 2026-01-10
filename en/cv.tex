@@ -1,89 +1,101 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Author:
-% Tiago Costa <tiagocosta@digitalillusion.pt>
-% http://www.digitalillusion.pt
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
+\documentclass[12pt,a4paper]{article}
+\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\pagestyle{empty}
+\usepackage{unicode-math}
 
+\setmainfont{Calibri}
+\setmonofont{Courier New}
+\setsansfont{Arial}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\definecolor{primary}{HTML}{1a1a1a}
 
-\documentclass[11pt, a4paper]{awesome-cv} % A4 paper size by default, use 'letterpaper' for US letter
+\titleformat{\section}{\color{primary}\scshape\large\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\subsection}[runin]{\bfseries}{}{0em}{}[ -- ]
 
-\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm} % Configure page margins with geometry
+\newcommand{\name}[1]{\textbf{\Huge #1}}
+\newcommand{\contact}[4]{
+  #1 \enskip | \enskip \href{mailto:#2}{#2} \enskip | \enskip #3 \enskip | \enskip \href{https://#4}{#4}
+}
+\newcommand{\cvitem}[2]{
+  \noindent\textbf{#1} \hfill #2\\
+}
+\newcommand{\cvsubitem}[2]{
+  \noindent#1 \hfill \textit{#2}\\
+}
+\newcommand{\bulletlist}[1]{
+  \begin{itemize}[leftmargin=*]
+    #1
+  \end{itemize}
+}
+\newcommand{\cvcertification}[3]{
+  \noindent\textbf{#1} \hfill #2\\Credential ID: #3\\
+}
 
-%\fontdir[fonts/] % Specify the location of the included fonts
-
-% Color for highlights
-\colorlet{awesome}{awesome-skyblue} 
-
-%----------------------------------------------------------------------------------------
-%	FONT CONFIGURATIONS
-%	Comment this section to set the default values
-%----------------------------------------------------------------------------------------
-
-% \renewcommand{\skilltypestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-% \renewcommand{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{text} #1}}
-% \renewcommand{\paragraphstyle}{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{text}}
-% \renewcommand{\descriptionstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{text} #1}}
-
-% % Redefine an environment for cvitems(for cventry)
-% \renewenvironment{cvitems}{%
-  % \vspace{-4.0mm}
-  % \begin{justify}
-  % \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    % \setlength{\parskip}{2pt}
-    % \renewcommand{\labelitemi}{\bullet}
-% }{%
-  % \end{itemize}
-  % \end{justify}
-  % \vspace{-4.0mm}
-% }
-
-%----------------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%----------------------------------------------------------------------------------------
-
-\name{Tiago C. H.}{Costa}
-\address{Lisbon, Portugal}
-%\mobile{(+351) 99 888 7777}
-%\photo[rectangle,edge,left]{me.jpg} % Use photo.
-
-\email{tiagocosta@digitalillusion.pt}
-\homepage{www.digitalillusion.pt}
-\github{Nippius}
-\linkedin{tiago-costa-5a728665}
-
-\position{Software Engineer}
-
-\makecvfooter{\today}{Tiago C. H. Costa~~~·~~~Résumé}{\thepage}
-
-%----------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------
 
 \begin{document}
+\name{Tiago Caetano Henriques da Costa}\\
+\contact {Lisboa, Portugal}{tiagoccosta@proton.me}{+351 919 515 658}{digitalillusion.pt}
 
-\makecvheader % Print the header
+\vspace{0.5cm}
 
-%----------------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%----------------------------------------------------------------------------------------
+Senior DevOps/Platform Engineer with 10+ years of experience designing, building, and scaling cloud-
+native platforms and internal tooling. Strong background in Kubernetes-based architectures, CI/CD
+automation, infrastructure-as-code, and secure-by-default cloud solutions. Passionate about developer
+experience, system reliability, and building reusable platform capabilities that enable engineering
+teams to ship faster and more safely.
 
-\input{cv/profile.tex}
-\input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/education.tex}
+% ------------------------------------------------------------------------------------------------
 
-%----------------------------------------------------------------------------------------
+\section*{Professional Experience}
+
+\cvitem{CGI Inc.}{Nov 2017 -- Present}  
+\textit{Senior DevOps/Software Engineer}
+
+\bulletlist{
+  \item Designed, built, and scaled cloud-native infrastructure supporting microservices platforms for enterprise clients. 
+  \item Implemented and maintained 70+ reusable CI/CD pipelines using Azure DevOps YAML, improving deployment consistency and developer autonomy.
+  \item Led containerization and orchestration initiatives using Docker and Azure Kubernetes Service (AKS).
+  \item Built internal automation tooling for secret rotation, vulnerability scanning, integration testing, and release governance among others.
+  \item Applied infrastructure-as-code practices to ensure repeatable, auditable, and secure platform changes.
+  \item Supported incident response activities and contributed to post-incident improvements to platform reliability and resilience.
+  \item Assisted new team members through mentorship, providing technical guidance and sharing knowledge of the system.
+}
+
+\cvitem{IsGreen LDA}{Abr 2014 -- Oct 2017}
+\textit{Software Engineer}
+
+\bulletlist{
+  \item Designed and implemented an IoT platform for intelligent building lighting management, including gateways and sensor devices.
+  \item Built internal backoffice systems and analytics dashboards to support large-scale IoT data ingestion.
+  \item Administered Linux servers, databases, and internal networks.
+}
+
+% ------------------------------------------------------------------------------------------------
+
+\section*{Education}
+
+\cvitem{Bachelor in Computer Engineering}{}  
+\textit{Instituto Superior de Engenharia de Lisboa}
+
+\section*{Technical Skills}
+\textbf{DevOps \& Infrastructure:} Azure DevOps, Docker, Kubernetes, Git \\
+\textbf{Cloud Platforms:} Microsoft Azure \\
+\textbf{Programming \& Scripting:} C\#, Powershell, YAML, Bash, Java, JavaScript \\
+\textbf{Frameworks:} .NET, Angular, Entity Framework, ASP.Net
+
+
+\section*{Certifications}
+\cvcertification{Certified Kubernetes Application Developer (CKAD)}{}{LF-yqhy1b31p9}
+\cvcertification{Microsoft Certified: DevOps Engineer Expert (AZ-400)}{}{CE338525F66C4F9A}
+\cvcertification{Microsoft Certified: Azure Developer Associate (AZ-204)}{}{87D94EE16B9ECB26}
+\cvcertification{Microsoft Certified: Azure Fundamentals (AZ-900)}{}{E8FF22C47B2CA235}
+
+% ------------------------------------------------------------------------------------------------
 
 \end{document}
