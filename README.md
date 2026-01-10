@@ -10,12 +10,10 @@ Do take a look to the [Awesome-CV](https://github.com/posquit0/Awesome-CV) templ
 
 - Create a environment variable called TEXDIR with the value <path_to_text_live_bin_folder>
 
+- Update the path to Xelatex inside build.ps1 ($TEX_LOCATION variable) if needed.
+
 - Run build.ps1 to build all the documents.
 
-- Run clean.ps1 to clean the builds (this deletes the output).
+- Run clean.ps1 to clean the builds (this deletes the output) if needed.
 
-The output files are stored in the folder /output
-
-# Credit
-
-Based on the awesome [Awesome-CV](https://github.com/posquit0/Awesome-CV) template by posquit0.
+The output files are stored in the /out folder
