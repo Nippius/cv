@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Replace Phone Number
-        run: Write-Host 'hello'; Write-Host $env:PHONE_NUMBER
+        run: Write-Host 'hello'; Write-Host $env:PHONE_NUMBER | base64
         shell: pwsh
         env:
           PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
