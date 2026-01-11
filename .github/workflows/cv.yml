@@ -11,15 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Compile english CV
+      - name: Compile CVs in multiple languages
         uses: xu-cheng/latex-action@v4
         with:
           latexmk_use_xelatex: true
-          root_file: |
-            en/en.tex
-            pt/pt.tex
+          root_file: '**/*.tex'
 
-      - name: Upload PDF file
+      - name: Upload CV files
         uses: actions/upload-artifact@v5
         with:
           name: Tiago_Costa_CV
