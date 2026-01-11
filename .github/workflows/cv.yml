@@ -17,6 +17,7 @@ jobs:
           latexmk_use_xelatex: true
           root_file: en/en.tex
           extra_system_packages: "msttcorefonts-installer"
+          pre_compile: "update-ms-fonts && fc-cache -f"
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v5
