@@ -11,9 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: l
-        run: Write-Host 'hello'
+      - name: Replace Phone Number
+        run: Write-Host 'hello'; Write-Host $env:PHONE_NUMBER
         shell: pwsh
+        env:
+          PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
 
       - name: Compile CV files in multiple languages
         uses: xu-cheng/latex-action@v4
