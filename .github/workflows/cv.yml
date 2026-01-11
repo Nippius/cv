@@ -1,4 +1,4 @@
-name: Publish_CV
+name: create_cv
 
 on:
   push:
