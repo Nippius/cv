@@ -11,7 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Compile CVs in multiple languages
+      - name: l
+        run: Write-Host 'hello'
+        shell: pwsh
+
+      - name: Compile CV files in multiple languages
         uses: xu-cheng/latex-action@v4
         with:
           latexmk_use_xelatex: true
