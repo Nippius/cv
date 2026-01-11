@@ -15,12 +15,12 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           latexmk_use_xelatex: true
-          root_file: en/en.tex
-          extra_system_packages: "msttcorefonts-installer"
-          pre_compile: "update-ms-fonts && fc-cache -f"
+          root_file: |
+            en/en.tex
+            pt/pt.tex
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v5
         with:
-          name: Tiago_Costa_CV_EN
-          path: en.pdf
+          name: Tiago_Costa_CV
+          path: '*.pdf'
